@@ -1,7 +1,14 @@
+# Rider cache directory
 .idea/
-
-bin/
-obj/
-/packages/
 riderModule.iml
 /_ReSharper.Caches/
+
+# Environment file
+.env
+
+# Packages directory
+/packages/
+
+# Build directory
+bin/
+obj/
