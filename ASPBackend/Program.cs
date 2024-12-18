@@ -15,6 +15,7 @@ var dbURl = Env.GetString("DB_URL");
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
+services.AddControllers();
 services.AddDbContext<AppDbContext>(options => options.UseNpgsql(dbURl));
 
 // Build the application
@@ -28,5 +29,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();
